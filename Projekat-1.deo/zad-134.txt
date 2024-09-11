@@ -1,0 +1,4 @@
+110. Informacioni sistem za pracenje taksi vozila – Svako taksi vozilo poseduje GPS uredaj koji odreduje trenutnu poziciju vozila i šalje tu informaciju ka centralnom serveru. Obezbediti prikaz informacija o vozilima na klijentskoj aplikaciji. Podatke o vozilima smestati u bazu podataka. Podaci o zapošljenima i stalnim klijentima se cuvaju u centralizovanoj bazi podataka.
+
+
+Obrazac: problem poslovnog cilja

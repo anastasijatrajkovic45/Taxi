@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml"
+ 	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	
+	<h:body>
+		<h1>Dodavanje-Azuriranje-Brisanje Taksi stanice</h1>
+		<hr />
+			<h3>Dodavanje</h3>
+			
+		<h:form>
+		<h:outputLabel value="PIB:"/>
+		<div>
+			<h:inputText value="#{taksiStanicaController.pib}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Ime firme:"/>
+		</div>
+		<div>
+			<h:inputText value="#{taksiStanicaController.nazivFirme}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Broj slobodnih vozila:"/>
+		</div>
+		<div>
+			<h:inputText value="#{taksiStanicaController.brojSlobodnihVozila}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Broj vozila na zadatku:"/>
+		</div>
+		<div>
+			<h:inputText value="#{taksiStanicaController.brojVozilaNaZadatku}"></h:inputText>
+		</div>
+		
+		
+		
+		<h:commandButton value="Dodaj Taksi stanicu" action="#{taksiStanicaController.addTaksiStanica(taksiStanicaController.pib, taksiStanicaController.nazivFirme, taksiStanicaController.brojSlobodnihVozila,taksiStanicaController.brojVozilaNaZadatku)}"></h:commandButton>
+                
+		</h:form>
+		
+		
+		
+		
+		<h:form>
+		<h3>Brisanje</h3>
+			<h:outputLabel value="Unesite  PIB Taksi stanice koju zelite da obrisete:"/>
+		<div>
+			<h:inputText value="#{taksiStanicaController.pib}"></h:inputText>
+		</div>
+		
+		<h:commandButton value="Obrisi Taksi stanicu" action="#{taksiStanicaController.deleteTaksiStanica(taksiStanicaController.pib)}"></h:commandButton>
+          
+		</h:form>
+		
+		
+		<h:form>
+		<h3>Azuriranje Taksi stanice</h3>
+			<h:outputLabel value="Unesite PIB Taksi Stanice koju zelite da azurirate:"/>
+		<div>
+			<h:inputText value="#{taksiStanicaController.pib}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Naziv firme:"/>
+		</div>
+		<div>
+			<h:inputText value="#{taksiStanicaController.nazivFirme}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Broj slobodnih vozila:"/>
+		</div>
+		<div>
+			<h:inputText value="#{taksiStanicaController.brojSlobodnihVozila}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Broj vozila na zadatku:"/>
+		</div>
+		<div>
+			<h:inputText value="#{taksiStanicaController.brojVozilaNaZadatku}"></h:inputText>
+		</div>
+		
+		
+		<h:commandButton value="Azuriraj Taksi stanicu" action="#{taksiStanicaController.updateTaksiStanica(taksiStanicaController.pib,taksiStanica.nazivFirme,taksiStanicaController.brojSlobodnihVozila,taksiStanicaController.brojVozilaNaZadatku)}"></h:commandButton>
+          
+		</h:form>
+		
+		
+	</h:body>
+	
+</html>

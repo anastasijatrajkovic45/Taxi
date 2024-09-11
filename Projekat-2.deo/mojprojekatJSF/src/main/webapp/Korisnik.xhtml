@@ -1,0 +1,94 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml"
+ 	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	
+	<h:body>
+		<h1>Dodavanje-Azuriranje-Brisanje Korisnika</h1>
+		<hr />
+			<h3>Dodavanje</h3>
+			
+		<h:form>
+		<h:outputLabel value="JMBG:"/>
+		<div>
+			<h:inputText value="#{korisnikController.jmbg}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Ime:"/>
+		</div>
+		<div>
+			<h:inputText value="#{korisnikController.ime}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Prezime:"/>
+		</div>
+		<div>
+			<h:inputText value="#{korisnikController.godine}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Godine:"/>
+		</div>
+		<div>
+			<h:inputText value="#{korisnikController.prezime}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Grad:"/>
+		</div>
+		<div>
+			<h:inputText value="#{korisnikController.grad}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Drzava:"/>
+		</div>
+		<div>
+			<h:inputText value="#{korisnikController.drzava}"></h:inputText>
+		</div>
+		
+		<h:commandButton value="Dodaj Korisnika" action="#{korisnikController.addKorisnik(korisnikController.jmbg, korisnikController.ime, korisnikController.prezime,korisnikController.grad,korisnikController.drzava)}"></h:commandButton>
+                
+		</h:form>
+		
+		
+		
+		
+		<h:form>
+		<h3>Brisanje</h3>
+			<h:outputLabel value="Unesite JMBG korisnika kojeg zelite da obrisete:"/>
+		<div>
+			<h:inputText value="#{korisnikController.jmbg}"></h:inputText>
+		</div>
+		
+		<h:commandButton value="Obrisi Korisnika" action="#{korisnikController.deleteKorisnik(korisnikController.jmbg)}"></h:commandButton>
+          
+		</h:form>
+		
+		<h:form>
+		<h3>Azuriranje</h3>
+			<h:outputLabel value="Unesite JMBG korisnika kojeg zelite da azurirate:"/>
+		<div>
+			<h:inputText value="#{korisnikController.jmbg}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Grad:"/>
+		</div>
+		<div>
+			<h:inputText value="#{korisnikController.grad}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Drzava:"/>
+		</div>
+		<div>
+			<h:inputText value="#{korisnikController.drzava}"></h:inputText>
+		</div>
+		
+		
+		<h:commandButton value="Azuriraj Korisnika" action="#{korisnikController.updateKorisnik(korisnikController.jmbg,korisnikController.grad,korisnikController.drzava)}"></h:commandButton>
+          
+		</h:form>
+		
+	</h:body>
+	
+</html>

@@ -1,0 +1,63 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml"
+ 	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	
+	<h:body>
+		<h1>Kreiranje porudzbine</h1>
+		<hr />
+			<h3>Dodavanje</h3>
+			
+		<h:form>
+		<h:outputLabel value="Pocetna adresa:"/>
+		<div>
+			<h:inputText value="#{narudzbinaController.pocetnaAdesa}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Krajnja adresa:"/>
+		</div>
+		<div>
+			<h:inputText value="#{narudzbinaController.krajnjaAdresa}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Vreme porudzbine:"/>
+		</div>
+		<div>
+			<h:inputText value="#{narudzbinaController.vremePorudzbine}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Broj osoba:"/>
+		</div>
+		<div>
+			<h:inputText value="#{narudzbinaController.brojOsoba}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="ID Taksi stanice:"/>
+		</div>
+		<div>
+			<h:inputText value="#{narudzbinaController.idTaksiStanice}"></h:inputText>
+		</div>
+		
+		<h:commandButton value="Dodaj narudzbinu" action="#{narudzbinaController.addNarudzbina(narudzbinaController.pocetnaAdesa, narudzbinaController.krajnjaAdresa, narudzbinaController.vremePorudzbine,narudzbinaController.brojOsoba,narudzbinaController.pibTaksiStanice)}"></h:commandButton>
+                
+		</h:form>
+		
+		
+		<h:form>
+		<h3>Brisanje</h3>
+			<h:outputLabel value="Unesite  ID Narudzbine koju zelite da obrisete:"/>
+		<div>
+			<h:inputText value="#{narudzbinaController.idNarudzbine}"></h:inputText>
+		</div>
+		
+		<h:commandButton value="Obrisi Korisnika" action="#{narudzbinaController.deleteNarudzbina(narudzbinaController.idNarudzbine)}"></h:commandButton>
+          
+		</h:form>
+		
+		
+	</h:body>
+	
+</html>

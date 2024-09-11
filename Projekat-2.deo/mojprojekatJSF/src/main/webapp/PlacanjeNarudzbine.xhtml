@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns = "http://www.w3.org/1999/xhtml"
+ 	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+	xmlns:h="http://xmlns.jcp.org/jsf/html">
+	
+	<h:body>
+		<h1>Placanje porudzbine</h1>
+		<hr />
+			<h3>Dodavanje transkacije</h3>
+			
+		<h:form>
+		<h:outputLabel value="Jmbg Korisnika:"/>
+		<div>
+			<h:inputText value="#{placanjeNarudzbineController.jmbgKorisnika}"></h:inputText>
+		</div>
+		<div>
+			<h:outputText value="Id narudzbine:"/>
+		</div>
+		<div>
+			<h:inputText value="#{placanjeNarudzbineController.idNarudzbineKorisnika}"></h:inputText>
+		</div>
+			<h:form>
+				<h:commandButton value="Dodaj narudzbinu" action="#{placanjeNarudzbineController.addPlacanjeNarudzbine(placanjeNarudzbineController.jmbgKorisnika, placanjeNarudzbineController.idNarudzbineKorisnika)}"></h:commandButton>
+        	</h:form>
+        </h:form>
+        
+        <h:form>
+        <h3>Iznos uslge:</h3>
+		<div>
+			<div>
+				 <h:outputLabel value="Unesite broj racuna:"/>
+     			 <h:inputText value="#{placanjeNarudzbineController.idRacuna}"></h:inputText>
+     		</div>
+     		
+     		<div>
+     			 <h:outputLabel value="Unesite broj predjenih kilometra:"/>
+     			 <h:inputText value="#{placanjeNarudzbineController.predjeniKm}"></h:inputText>
+     		</div>
+     		<h:form>
+      		<h:commandButton value="Izracunaj cenu" action="#{placanjeNarudzbineController.sendGET(placanjeNarudzbineController.idRacuna, placanjeNarudzbineController.brojPredjenihKM)}"></h:commandButton>
+      		</h:form>
+		</div>
+		
+		</h:form>
+		
+		<h:form>
+			<div>
+				<h3>Placanje</h3>
+					<h:outputLabel value="Broj racuna:"/>
+				<div>
+					<h:inputText value="#{placanjeNarudzbineController.idRacuna}"></h:inputText>
+				</div>
+			
+				<h:form>
+					<h:commandButton value="Plati" action="#{placanjeNarudzbineController.deleteTransakcija(placanjeNarudzbineController.idRacuna)}" onclick = "alert('Obavljena transakcija!');"></h:commandButton>
+         		</h:form>
+         	</div>
+		</h:form>
+		
+		
+		
+	</h:body>
+	
+</html>

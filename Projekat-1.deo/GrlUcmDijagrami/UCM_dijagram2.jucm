@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<urn:URNspec xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ucm.map="http:///ucm/map.ecore" xmlns:urn="http:///urn.ecore" name="URNspec" author="ANASTASIJA" created="November 17, 2022 at 10:23:44 PM CET" modified="November 18, 2022 at 10:34:41 PM CET" specVersion="6" urnVersion="1.27" nextGlobalID="47">
+  <ucmspec>
+    <scenarioGroups name="ScenarioGroup5" id="5">
+      <scenarios name="ScenarioDef6" id="6"/>
+    </scenarioGroups>
+  </ucmspec>
+  <grlspec>
+    <groups name="StrategiesGroup3" id="3" strategies="4"/>
+    <strategies name="EvaluationStrategy4" id="4" author="ANASTASIJA" group="3"/>
+    <impactModel/>
+    <indicatorGroup name="Time" id="7" isRedesignCategory="true"/>
+    <indicatorGroup name="Cost" id="8" isRedesignCategory="true"/>
+    <indicatorGroup name="Quality" id="9" isRedesignCategory="true"/>
+    <indicatorGroup name="Flexibility" id="10" isRedesignCategory="true"/>
+    <featureModel/>
+  </grlspec>
+  <urndef>
+    <responsibilities name="Prosledjivanje informacije serveru" id="34" respRefs="26"/>
+    <responsibilities name="Slanje informaciija o prihvacenoj/odbijenoj  voznji" id="35" respRefs="27"/>
+    <responsibilities name="Prihvatanje/odbijanje voznje" id="36" respRefs="28"/>
+    <responsibilities name="Prijem upita o voznji" id="37" respRefs="29"/>
+    <responsibilities name="Slanje upita o slobodnom vozilu" id="38" respRefs="30"/>
+    <responsibilities name="Prosledjivanje informacije bazi" id="39" respRefs="32"/>
+    <specDiagrams xsi:type="ucm.map:UCMmap" name="UCMmap2" id="2">
+      <nodes xsi:type="ucm.map:StartPoint" name="Pribavljanje vozila" id="31" x="-150" y="164" contRef="41" succ="//@urndef/@specDiagrams.0/@connections.5">
+        <label/>
+        <precondition deltaX="40" deltaY="-17" label="" expression="true"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:RespRef" name="RespRef249" id="28" x="338" y="460" contRef="47" succ="//@urndef/@specDiagrams.0/@connections.3" pred="//@urndef/@specDiagrams.0/@connections.1" respDef="36">
+        <label deltaX="-94" deltaY="-39"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:EndPoint" name="Prijem i cuvanje informacija" id="33" x="-78" y="228" contRef="41" pred="//@urndef/@specDiagrams.0/@connections.6">
+        <label deltaX="-35" deltaY="9"/>
+        <postcondition deltaX="-40" deltaY="-20" label="" expression="true"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:RespRef" name="RespRef231" id="27" x="397" y="407" contRef="47" succ="//@urndef/@specDiagrams.0/@connections.2" pred="//@urndef/@specDiagrams.0/@connections.3" respDef="35">
+        <label deltaX="32" deltaY="13"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:RespRef" name="RespRef239" id="32" x="106" y="202" contRef="45" succ="//@urndef/@specDiagrams.0/@connections.6" pred="//@urndef/@specDiagrams.0/@connections.4" respDef="39">
+        <label deltaX="-62" deltaY="-47"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:RespRef" name="RespRef235" id="26" x="381" y="173" contRef="43" succ="//@urndef/@specDiagrams.0/@connections.4" pred="//@urndef/@specDiagrams.0/@connections.2" respDef="34">
+        <label deltaX="29" deltaY="14"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:RespRef" name="RespRef219" id="30" x="-141" y="309" contRef="41" succ="//@urndef/@specDiagrams.0/@connections.0" pred="//@urndef/@specDiagrams.0/@connections.5" respDef="38">
+        <label deltaX="-25" deltaY="3"/>
+      </nodes>
+      <nodes xsi:type="ucm.map:RespRef" name="RespRef227" id="29" x="209" y="516" contRef="47" succ="//@urndef/@specDiagrams.0/@connections.1" pred="//@urndef/@specDiagrams.0/@connections.0" respDef="37">
+        <label deltaX="-48" deltaY="-49"/>
+      </nodes>
+      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef41" id="41" x="-205" y="121" width="270" height="212" contDef="40" nodes="31 33 30" parent="45">
+        <label/>
+      </contRefs>
+      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef43" id="43" x="153" y="72" width="385" height="235" contDef="42" nodes="26">
+        <label/>
+      </contRefs>
+      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef45" id="45" x="-243" y="69" width="380" height="495" contDef="44" nodes="32" children="41">
+        <label/>
+      </contRefs>
+      <contRefs xsi:type="ucm.map:ComponentRef" name="ComponentRef47" id="47" x="155" y="328" width="386" height="235" contDef="46" nodes="28 27 29">
+        <label/>
+      </contRefs>
+      <connections xsi:type="ucm.map:NodeConnection" source="30" target="29"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="29" target="28"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="27" target="26"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="28" target="27"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="26" target="32"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="31" target="30"/>
+      <connections xsi:type="ucm.map:NodeConnection" source="32" target="33"/>
+    </specDiagrams>
+    <components name="Baza podataka" id="40" fillColor="191,96,191" filled="true" contRefs="41"/>
+    <components name="Taksi sluzba" id="42" fillColor="191,191,96" filled="true" contRefs="43" kind="Actor"/>
+    <components name="Centralni server" id="44" fillColor="160,255,255" filled="true" contRefs="45" kind="Actor"/>
+    <components name="Taksi vozilo" id="46" fillColor="96,191,96" filled="true" contRefs="47" kind="Actor"/>
+  </urndef>
+  <metadata name="_Use0to100EvaluationRange" value="false"/>
+</urn:URNspec>
